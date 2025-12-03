@@ -10,7 +10,7 @@ const getFuel = (mass) => {
   const divisionValue = divideWith3(mass);
   const roundValue = round(divisionValue);
   const subtractedValue = subtractWith2(roundValue);
-  return subtractedValue;
+  return  subtractedValue > 0 ? subtractedValue + getFuel(subtractedValue) : 0;
 }
 
 const fuelRequirements = () => {
